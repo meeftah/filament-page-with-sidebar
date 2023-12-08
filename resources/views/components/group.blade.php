@@ -3,12 +3,13 @@
     'icon' => null,
     'items' => [],
     'label' => null,
+    'fixed' => false,
 ])
 
 <li
     x-data="{ label: @js($label) }"
     data-group-label="{{ $label }}"
-    class="fi-sidebar-group flex flex-col gap-y-1">
+    class="fi-sidebar-group flex flex-col gap-y-1 @if ($fixed) fixed @endif">
 
     @if ($label)
         <div

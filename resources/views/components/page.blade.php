@@ -54,6 +54,7 @@
                                         :icon="$group->getIcon()"
                                         :items="$group->getItems()"
                                         :label="$group->getLabel()"
+                                        :fixed="$sidebar->isFixedPosition()"
                                 />
                             @endforeach
                         </ul>
