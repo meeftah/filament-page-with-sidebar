@@ -24,4 +24,11 @@ class PageNavigationItem extends NavigationItem
             ? __($label)
             : $label;
     }
+
+    public function isActiveWithFragment(string | Closure | null $fragment): static
+    {
+        $this->isActive = ((bool) $fragment === $this->url);
+
+        return $this;
+    }
 }
