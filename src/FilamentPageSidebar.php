@@ -18,7 +18,7 @@ class FilamentPageSidebar
     protected bool | Closure $descriptionCopyable = false;
     protected array $navigationItems;
     protected PageNavigationLayoutEnum $pageNavigationLayoutEnum = PageNavigationLayoutEnum::Topbar;
-    protected static bool $isFixedPosition = false;
+    protected bool $isFixedPosition = false;
 
     public function __construct()
     {
