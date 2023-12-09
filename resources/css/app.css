@@ -4,24 +4,22 @@
 
 .fixed-page-sidebar {
     position: fixed !important;
-
-    @media (max-width: 1535px) {
-        /* Adjust for xl */
-        position: fixed !important;
-    }
+    scroll-padding-top: 5vw;
 
     @media (max-width: 1279px) {
         /* Adjust for lg */
-        position: fixed !important;
+        scroll-padding-top: 7vw;
     }
 
     @media (max-width: 1023px) {
         /* Adjust for md */
         position: inherit !important;
+        scroll-padding-top: 9vw;
     }
 
     @media (max-width: 767px) {
         /* Adjust for sm */
         position: inherit !important;
+        scroll-padding-top: 18vw;
     }
 }
