@@ -19,7 +19,7 @@
                         --col-span-lg: span {{ $sidebarWidths['lg'] ?? 3 }};
                         --col-span-xl: span {{ $sidebarWidths['xl'] ?? 3 }};
                         --col-span-2xl: span {{ $sidebarWidths['2xl'] ?? 3 }};">
-                    <div class="">
+                    <div class="@if ($sidebar->isFixedPosition()) fixed-page-sidebar @endif">
                         <div class="flex items-center rtl:space-x-reverse">
                             @if ($sidebar->getTitle() != null || $sidebar->getDescription() != null)
                                 <div class="w-full">
@@ -54,7 +54,6 @@
                                         :icon="$group->getIcon()"
                                         :items="$group->getItems()"
                                         :label="$group->getLabel()"
-                                        :fixed="$sidebar->isFixedPosition()"
                                 />
                             @endforeach
                         </ul>

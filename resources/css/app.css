@@ -2,10 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (max-width: 1440px) {
-    /* Set your maximum laptop size here */
-    .fixed {
-        position: static !important;
-        /* You can adjust the styling as needed for smaller screens */
+.fixed-page-sidebar {
+    position: fixed !important;
+
+    @media (max-width: 1535px) {
+        /* Adjust for xl */
+        position: fixed !important;
+    }
+
+    @media (max-width: 1279px) {
+        /* Adjust for lg */
+        position: fixed !important;
+    }
+
+    @media (max-width: 1023px) {
+        /* Adjust for md */
+        position: inherit !important;
+    }
+
+    @media (max-width: 767px) {
+        /* Adjust for sm */
+        position: inherit !important;
     }
 }
