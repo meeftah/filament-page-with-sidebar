@@ -24,7 +24,7 @@
                             @if ($sidebar->getTitle() != null || $sidebar->getDescription() != null)
                                 <div class="w-full">
                                     @if ($sidebar->getTitle() != null)
-                                        <h3 class="text-base font-medium text-slate-700 dark:text-white truncate block">
+                                        <h3 class="text-base font-medium dark:text-slate-700 truncate block">
                                             {{ $sidebar->getTitle() }}
                                         </h3>
                                     @endif
