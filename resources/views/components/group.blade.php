@@ -9,7 +9,7 @@
 <li
     x-data="{ label: @js($label) }"
     data-group-label="{{ $label }}"
-    class="fi-sidebar-group flex flex-col gap-y-1 @if ($fixed) fixed @endif">
+    class="fi-sidebar-group flex flex-col gap-y-1 @if ($fixed) fixed lg:static @endif">
 
     @if ($label)
         <div

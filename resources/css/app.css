@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media (max-width: 1440px) {
+    /* Set your maximum laptop size here */
+    .fixed {
+        position: static !important;
+        /* You can adjust the styling as needed for smaller screens */
+    }
+}
