@@ -5,7 +5,7 @@
 <div>
     @if($sidebar->getPageNavigationLayout() == \AymanAlhattami\FilamentPageWithSidebar\Enums\PageNavigationLayoutEnum::Sidebar)
         <div class="mt-8">
-            <div class="grid grid-cols-12 gap-4 sm:gap-5 lg:gap-6">
+            <div class="grid grid-cols-12 gap-4 sm:gap-5 lg:gap-6 custom-page-sidebar">
                 <div class="col-[--col-span-default]
                         sm:col-[--col-span-sm]
                         md:col-[--col-span-md]
