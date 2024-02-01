@@ -50,7 +50,11 @@ trait HasPageSidebar
     public function getSidebar()
     {
         if(property_exists($this, "resource")) {
-            return $this->record ? static::getResource()::sidebar($this->record) : static::sidebar();
+            if(method_exists(static::getResource(), 'sidebarInList')) {
+                return static::getResource()::sidebarInList();
+            } else {
+                return static::getResource()::sidebar($this->record);
+            }
         } else {
             return static::sidebar();
         }
