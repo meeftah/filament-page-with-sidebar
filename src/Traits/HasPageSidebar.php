@@ -53,6 +53,9 @@ trait HasPageSidebar
     {
         if(property_exists($this, "resource")) {
             if ($this instanceof ListRecords) {
+                if(!method_exists(static::getResource(), 'sidebarInList')) {
+                    throw new \Exception('sidebarInList method not found in ' . static::getResource());
+                }
                 return static::getResource()::sidebarInList();
             }
             return static::getResource()::sidebar($this->record);
