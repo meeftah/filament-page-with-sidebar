@@ -28,5 +28,6 @@
 
   @media (max-width: 639px) {
     position: inherit !important;
+    width: inherit !important;
   }
 }
