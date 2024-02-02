@@ -2,8 +2,6 @@
 
 namespace AymanAlhattami\FilamentPageWithSidebar\Traits;
 
-use Filament\Resources\Pages\ListRecords;
-
 trait HasPageSidebar
 {
     /**
@@ -52,16 +50,21 @@ trait HasPageSidebar
     public function getSidebar()
     {
         if(property_exists($this, "resource")) {
-            if ($this instanceof ListRecords) {
-                if(!method_exists(static::getResource(), 'sidebarInList')) {
-                    throw new \Exception('sidebarInList method not found in ' . static::getResource());
-                }
-                return static::getResource()::sidebarInList();
+            if (isset($this->record) && isset($this->parent)) {
+                return static::getParentResource()::sidebar(record: $this->record, parent: $this->parent);
             }
-            return static::getResource()::sidebar($this->record);
-        } else {
-            return static::sidebar();
-        }
+
+            if (!isset($this->record) && isset($this->parent)) {
+                return static::getParentResource()::sidebar(parent: $this->parent);
+            }
+
+            if (isset($this->record) && !isset($this->parent)) {
+                return static::getResource()::sidebar(record: $this->record);
+            }
+
+            return static::getResource()::sidebar();
+        } 
+        return static::sidebar();
     }
 
     public function getSidebarWidths(): array
