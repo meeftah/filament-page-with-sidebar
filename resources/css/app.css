@@ -4,7 +4,7 @@
 
 .fixed-page-sidebar {
   position: fixed !important;
-  width: calc((1200px - 11 * 4px) / 12) !important;
+  width: 100% !important;
 
   @media (max-width: 1535px) {
     position: fixed !important;
