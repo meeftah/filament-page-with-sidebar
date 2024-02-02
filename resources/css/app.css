@@ -3,21 +3,27 @@
 @tailwind utilities;
 
 .fixed-page-sidebar {
+  position: fixed !important;
+  --col-span-default: span 12;
+  --col-span-sm: span 12;
+  --col-span-md: span 3;
+  --col-span-lg: span 3;
+  --col-span-xl: span 3;
+  --col-span-2xl: span 3;
+
+  @media (max-width: 1279px) {
     position: fixed !important;
+  }
 
-    @media (max-width: 1279px) {
-        position: fixed !important;
-    }
+  @media (max-width: 1023px) {
+    position: fixed !important;
+  }
 
-    @media (max-width: 1023px) {
-        position: fixed !important;
-    }
+  @media (max-width: 767px) {
+    position: inherit !important;
+  }
 
-    @media (max-width: 767px) {
-        position: inherit !important;
-    }
-
-    @media (max-width: 639px) {
-        position: inherit !important;
-    }
+  @media (max-width: 639px) {
+    position: inherit !important;
+  }
 }
