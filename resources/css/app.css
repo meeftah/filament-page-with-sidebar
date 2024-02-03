@@ -4,7 +4,7 @@
 
 .fixed-page-sidebar {
   position: fixed !important;
-  width: 100% !important;
+  width: calc((600px - 2 * 4px) / 3) !important;
 
   @media (max-width: 1535px) {
     position: fixed !important;
@@ -28,6 +28,6 @@
 
   @media (max-width: 639px) {
     position: inherit !important;
-    width: inherit !important;
+    width: 100% !important;
   }
 }
