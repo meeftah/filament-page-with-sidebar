@@ -21,7 +21,7 @@ trait HasPageSidebar
         // Why boot ? https://livewire.laravel.com/docs/lifecycle-hooks#boot
 
         // Using ${'view'} instead of $view in order to avoid Intelephense warning
-        if (static::$hasSidebar) {
+        if ($this->hasSidebar) {
             static::${'view'} = 'filament-page-with-sidebar::proxy';
         }
     }
