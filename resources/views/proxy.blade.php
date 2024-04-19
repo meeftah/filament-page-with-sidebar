@@ -1,3 +1,5 @@
-<x-filament-page-with-sidebar::page>
-    @include($this->getIncludedSidebarView())
-</x-filament-page-with-sidebar::page>
+@if (method_exists($this, 'getIncludedSidebarView'))
+    <x-filament-page-with-sidebar::page>
+        @include($this->getIncludedSidebarView())
+    </x-filament-page-with-sidebar::page>
+@endif
